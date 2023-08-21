@@ -1,0 +1,175 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    padding: 0;
+}
+.video-cont{
+width:100vw;
+height:100vh;
+background-color: black;
+position: relative;
+overflow: hidden;
+}
+video{
+    width:99%;
+    height:100%;
+}
+.actions-cont{
+    height:13rem;
+    width:5rem;
+    position:absolute;
+    top:calc( ( 100vh - 13rem ) / 2 );
+    right: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index:2;
+}
+.actions-cont > *{
+    width:100%;
+    height:5rem;
+    text-align: center;
+    border-radius: 50%;
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.record-btn{
+    background-color: red;
+    height:3.7rem;
+    width:3.7rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.capture-btn{
+    background-color: white;
+    height:3.7rem;
+    width:3.7rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.actions-cont .material-icons{
+    scale:1.5;
+
+}
+.actions-cont > * :hover{
+    cursor: pointer;
+}
+.scale-record{
+    animation-name: scale-record;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes scale-record{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(0.8);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.scale-capture{
+    animation-name: scale-capture;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+@keyframes scale-capture{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(0.8);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.timer-cont{
+    position: absolute;
+    right:6rem;
+    top:15rem;
+    color: white;
+    scale:0.5;
+    opacity: 0;
+
+}
+.pop{
+    top:13rem;
+    opacity: 1;
+    scale:1;
+    transition: all 0.3s;
+
+}
+.filters-cont{
+    background-color: aqua;
+    position: absolute;
+    left:5rem;
+    top:calc( ( 100vh - 16rem ) / 2 );
+    height:16rem;
+    width:7rem;
+    z-index:2;
+}
+.filter{
+    height:4rem;
+    width:100%;
+    background-image: url("https://picsum.photos/seed/picsum/200/300");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: color-burn;
+}
+.blue{
+    background-color: #6c262669;
+}
+.pink{
+    background-color: #e17eab82;
+}
+.orange{
+    background-color:#dca8787d ;
+}
+.transparent{
+    background-color: transparent;
+}
+.filter-layer{
+    position: fixed;
+    height: 100%;
+    width:62%;
+    margin-left: auto;
+    margin-right: auto;
+    top:0;
+    left:18.5%;
+    z-index:1;
+}
+.gallery-btn{
+    position: absolute;
+    right:6.7rem;
+    bottom: 5rem;
+    color: white;
+    scale: 1.8;
+    z-index: 2;
+}
+.gallery-btn :hover{
+    cursor: pointer;
+}
+.gallerytext{
+    position: absolute;
+    right:5.7rem;
+    bottom:3.4rem;
+    color:white;
+    font-family: cursive;
+    cursor: default;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}

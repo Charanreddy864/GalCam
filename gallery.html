@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./gallery.css">
+    <title>Gallery</title>
+</head>
+<body>
+    <div class="gallery-cont"></div>
+    <div class="close-btn">
+        <span class="material-icons">
+            close
+            </span>
+    </div>
+    <div class="count"></div>
+    <div class="emptymsg">Empty</div>
+    <div class="close-text">Close</div>
+    <script src="./DB.js"></script>
+    <script src="./gallery.js"></script>
+    <script>
+        let closeBtn=document.querySelector(".close-btn");
+            closeBtn.addEventListener("click",(e)=>{
+            location.assign("./index.html");
+        })
+        closeBtn.addEventListener("mouseover",(e)=>
+        {
+            let closeText=document.querySelector(".close-text");
+            closeText.classList.add("visible");
+        })
+        closeBtn.addEventListener("mouseout",(e)=>
+        {
+            let closeText=document.querySelector(".close-text");
+            closeText.classList.remove("visible");
+        })
+    </script>
+</body>
+</html>
